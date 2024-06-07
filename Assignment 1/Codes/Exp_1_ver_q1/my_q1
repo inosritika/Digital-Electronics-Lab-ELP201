@@ -1,0 +1,149 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1110-g18392a46)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_00000290823dd1c0 .scope module, "test_func1" "test_func1" 2 1;
+ .timescale 0 0;
+v0000029082438a30_0 .var "a", 0 0;
+v0000029082438210_0 .var "b", 0 0;
+v0000029082437ef0_0 .var "c", 0 0;
+v0000029082438ad0_0 .var "d", 0 0;
+v0000029082439250_0 .net "e", 0 0, L_00000290823dab40;  1 drivers
+S_00000290823dd350 .scope begin, "$ivl_for_loop0" "$ivl_for_loop0" 2 14, 2 14 0, S_00000290823dd1c0;
+ .timescale 0 0;
+v00000290823dbf60_0 .var/i "i", 31 0;
+S_000002908259cbf0 .scope module, "f" "func_q1" 2 4, 3 1 0, S_00000290823dd1c0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /INPUT 1 "c";
+    .port_info 3 /INPUT 1 "d";
+    .port_info 4 /OUTPUT 1 "out";
+L_00000290823dad70 .functor NOT 1, v0000029082438a30_0, C4<0>, C4<0>, C4<0>;
+L_00000290823daec0 .functor NOT 1, v0000029082438210_0, C4<0>, C4<0>, C4<0>;
+L_00000290823dab40 .functor OR 1, L_00000290823daad0, L_00000290823daf30, C4<0>, C4<0>;
+v00000290823dc3c0_0 .net "I", 0 7, L_0000029082437c70;  1 drivers
+L_0000029082441888 .functor BUFT 1, C4<1>, C4<0>, C4<0>, C4<0>;
+v00000290823dc820_0 .net/2u *"_ivl_0", 0 0, L_0000029082441888;  1 drivers
+L_00000290824419a8 .functor BUFT 1, C4<1>, C4<0>, C4<0>, C4<0>;
+v00000290823dca00_0 .net/2u *"_ivl_10", 0 0, L_00000290824419a8;  1 drivers
+L_00000290824418d0 .functor BUFT 1, C4<1>, C4<0>, C4<0>, C4<0>;
+v0000029082437e50_0 .net/2u *"_ivl_2", 0 0, L_00000290824418d0;  1 drivers
+v0000029082438cb0_0 .net *"_ivl_4", 0 0, L_00000290823dad70;  1 drivers
+L_0000029082441918 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0000029082438850_0 .net/2u *"_ivl_6", 0 0, L_0000029082441918;  1 drivers
+L_0000029082441960 .functor BUFT 1, C4<1>, C4<0>, C4<0>, C4<0>;
+v00000290824378b0_0 .net/2u *"_ivl_8", 0 0, L_0000029082441960;  1 drivers
+v0000029082438670_0 .net "a", 0 0, v0000029082438a30_0;  1 drivers
+v00000290824388f0_0 .net "b", 0 0, v0000029082438210_0;  1 drivers
+v0000029082438990_0 .net "c", 0 0, v0000029082437ef0_0;  1 drivers
+v0000029082438f30_0 .net "d", 0 0, v0000029082438ad0_0;  1 drivers
+v0000029082438710_0 .net "m1", 0 0, L_00000290823daad0;  1 drivers
+v0000029082439110_0 .net "m2", 0 0, L_00000290823daf30;  1 drivers
+v00000290824391b0_0 .net "out", 0 0, L_00000290823dab40;  alias, 1 drivers
+v0000029082438e90_0 .net "select_lines", 1 0, L_00000290824387b0;  1 drivers
+LS_0000029082437c70_0_0 .concat [ 1 1 1 1], v0000029082438a30_0, L_00000290824419a8, L_0000029082441960, L_0000029082441918;
+LS_0000029082437c70_0_4 .concat [ 1 1 1 1], v0000029082438a30_0, L_00000290823dad70, L_00000290824418d0, L_0000029082441888;
+L_0000029082437c70 .concat [ 4 4 0 0], LS_0000029082437c70_0_0, LS_0000029082437c70_0_4;
+L_00000290824387b0 .concat [ 1 1 0 0], v0000029082438ad0_0, v0000029082437ef0_0;
+L_0000029082438b70 .part L_0000029082437c70, 4, 4;
+L_0000029082438df0 .part L_0000029082437c70, 0, 4;
+S_000002908259cd80 .scope module, "M1" "mux_4to1" 3 9, 4 1 0, S_000002908259cbf0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "in";
+    .port_info 1 /INPUT 2 "select_lines";
+    .port_info 2 /INPUT 1 "enable";
+    .port_info 3 /OUTPUT 1 "out";
+L_00000290823daad0 .functor AND 1, L_0000029082437db0, L_00000290823daec0, C4<1>, C4<1>;
+L_00000290824419f0 .functor BUFT 1, C4<0011>, C4<0>, C4<0>, C4<0>;
+v00000290823dce60_0 .net/2s *"_ivl_0", 3 0, L_00000290824419f0;  1 drivers
+v00000290823dc1e0_0 .net *"_ivl_2", 3 0, L_0000029082439610;  1 drivers
+L_0000029082441a38 .functor BUFT 1, C4<00>, C4<0>, C4<0>, C4<0>;
+v00000290823dcc80_0 .net *"_ivl_5", 1 0, L_0000029082441a38;  1 drivers
+v00000290823dc640_0 .net/s *"_ivl_6", 3 0, L_0000029082438c10;  1 drivers
+v00000290823dcd20_0 .net *"_ivl_9", 0 0, L_0000029082437db0;  1 drivers
+v00000290823dc280_0 .net "enable", 0 0, L_00000290823daec0;  1 drivers
+v00000290823dc000_0 .net "in", 0 3, L_0000029082438b70;  1 drivers
+v00000290823dc500_0 .net "out", 0 0, L_00000290823daad0;  alias, 1 drivers
+v00000290823dc5a0_0 .net "select_lines", 1 0, L_00000290824387b0;  alias, 1 drivers
+L_0000029082439610 .concat [ 2 2 0 0], L_00000290824387b0, L_0000029082441a38;
+L_0000029082438c10 .arith/sub 4, L_00000290824419f0, L_0000029082439610;
+L_0000029082437db0 .part/v.s L_0000029082438b70, L_0000029082438c10, 1;
+S_000002908259cf10 .scope module, "M2" "mux_4to1" 3 10, 4 1 0, S_000002908259cbf0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "in";
+    .port_info 1 /INPUT 2 "select_lines";
+    .port_info 2 /INPUT 1 "enable";
+    .port_info 3 /OUTPUT 1 "out";
+L_00000290823daf30 .functor AND 1, L_00000290824383f0, v0000029082438210_0, C4<1>, C4<1>;
+L_0000029082441a80 .functor BUFT 1, C4<0011>, C4<0>, C4<0>, C4<0>;
+v00000290823dc0a0_0 .net/2s *"_ivl_0", 3 0, L_0000029082441a80;  1 drivers
+v00000290823dc6e0_0 .net *"_ivl_2", 3 0, L_00000290824382b0;  1 drivers
+L_0000029082441ac8 .functor BUFT 1, C4<00>, C4<0>, C4<0>, C4<0>;
+v00000290823dc320_0 .net *"_ivl_5", 1 0, L_0000029082441ac8;  1 drivers
+v00000290823dc780_0 .net/s *"_ivl_6", 3 0, L_0000029082438d50;  1 drivers
+v00000290823dc8c0_0 .net *"_ivl_9", 0 0, L_00000290824383f0;  1 drivers
+v00000290823dcaa0_0 .net "enable", 0 0, v0000029082438210_0;  alias, 1 drivers
+v00000290823dc960_0 .net "in", 0 3, L_0000029082438df0;  1 drivers
+v00000290823dcb40_0 .net "out", 0 0, L_00000290823daf30;  alias, 1 drivers
+v00000290823dcbe0_0 .net "select_lines", 1 0, L_00000290824387b0;  alias, 1 drivers
+L_00000290824382b0 .concat [ 2 2 0 0], L_00000290824387b0, L_0000029082441ac8;
+L_0000029082438d50 .arith/sub 4, L_0000029082441a80, L_00000290824382b0;
+L_00000290824383f0 .part/v.s L_0000029082438df0, L_0000029082438d50, 1;
+    .scope S_00000290823dd1c0;
+T_0 ;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0000029082438a30_0, 0;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0000029082438210_0, 0;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0000029082438ad0_0, 0;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0000029082437ef0_0, 0;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0000029082438ad0_0, 0;
+    %vpi_call 2 11 "$dumpfile", "func_1.vcd" {0 0 0};
+    %vpi_call 2 12 "$dumpvars", 32'sb00000000000000000000000000000000, S_00000290823dd1c0 {0 0 0};
+    %vpi_call 2 13 "$monitor", "a=%0b,b=%0b,c=%0b,d=%0b,e=%0b", v0000029082438a30_0, v0000029082438210_0, v0000029082437ef0_0, v0000029082438ad0_0, v0000029082439250_0 {0 0 0};
+    %fork t_1, S_00000290823dd350;
+    %jmp t_0;
+    .scope S_00000290823dd350;
+t_1 ;
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v00000290823dbf60_0, 0, 32;
+T_0.0 ;
+    %load/vec4 v00000290823dbf60_0;
+    %cmpi/s 16, 0, 32;
+    %jmp/0xz T_0.1, 5;
+    %load/vec4 v00000290823dbf60_0;
+    %pad/s 4;
+    %split/vec4 1;
+    %store/vec4 v0000029082438ad0_0, 0, 1;
+    %split/vec4 1;
+    %store/vec4 v0000029082437ef0_0, 0, 1;
+    %split/vec4 1;
+    %store/vec4 v0000029082438210_0, 0, 1;
+    %store/vec4 v0000029082438a30_0, 0, 1;
+    %delay 10, 0;
+    %load/vec4 v00000290823dbf60_0;
+    %addi 1, 0, 32;
+    %store/vec4 v00000290823dbf60_0, 0, 32;
+    %jmp T_0.0;
+T_0.1 ;
+    %end;
+    .scope S_00000290823dd1c0;
+t_0 %join;
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 5;
+    "N/A";
+    "<interactive>";
+    "func_q1_testbnh.v";
+    "func_q1.v";
+    "mux_4to1.v";

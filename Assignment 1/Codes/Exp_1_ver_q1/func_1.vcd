@@ -1,0 +1,188 @@
+$date
+	Thu Feb 24 23:11:28 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module test_func1 $end
+$var wire 1 ! e $end
+$var reg 1 " a $end
+$var reg 1 # b $end
+$var reg 1 $ c $end
+$var reg 1 % d $end
+$scope module f $end
+$var wire 1 " a $end
+$var wire 1 # b $end
+$var wire 1 $ c $end
+$var wire 1 % d $end
+$var wire 1 ! out $end
+$var wire 2 & select_lines [1:0] $end
+$var wire 1 ' m2 $end
+$var wire 1 ( m1 $end
+$var wire 8 ) I [0:7] $end
+$scope module M1 $end
+$var wire 1 * enable $end
+$var wire 4 + in [0:3] $end
+$var wire 1 ( out $end
+$var wire 2 , select_lines [1:0] $end
+$upscope $end
+$scope module M2 $end
+$var wire 1 # enable $end
+$var wire 4 - in [0:3] $end
+$var wire 1 ' out $end
+$var wire 2 . select_lines [1:0] $end
+$upscope $end
+$upscope $end
+$scope begin $ivl_for_loop0 $end
+$var integer 32 / i [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 /
+b0 .
+b110 -
+b0 ,
+b1110 +
+1*
+b11100110 )
+1(
+0'
+b0 &
+0%
+0$
+0#
+0"
+1!
+$end
+#10
+b1 &
+b1 ,
+b1 .
+1%
+b1 /
+#20
+1$
+b10 &
+b10 ,
+b10 .
+0%
+b10 /
+#30
+0!
+0(
+b11 &
+b11 ,
+b11 .
+1%
+b11 /
+#40
+0!
+0*
+0(
+1#
+0$
+b0 &
+b0 ,
+b0 .
+0%
+b100 /
+#50
+1!
+1'
+b1 &
+b1 ,
+b1 .
+1%
+b101 /
+#60
+1$
+b10 &
+b10 ,
+b10 .
+0%
+b110 /
+#70
+0!
+0'
+b11 &
+b11 ,
+b11 .
+1%
+b111 /
+#80
+1!
+1(
+b111 -
+b1101 +
+1*
+b11010111 )
+1"
+0#
+0$
+b0 &
+b0 ,
+b0 .
+0%
+b1000 /
+#90
+b1 &
+b1 ,
+b1 .
+1%
+b1001 /
+#100
+0!
+0(
+1$
+b10 &
+b10 ,
+b10 .
+0%
+b1010 /
+#110
+1!
+1(
+b11 &
+b11 ,
+b11 .
+1%
+b1011 /
+#120
+0!
+0(
+0*
+1#
+0$
+b0 &
+b0 ,
+b0 .
+0%
+b1100 /
+#130
+1!
+1'
+b1 &
+b1 ,
+b1 .
+1%
+b1101 /
+#140
+1$
+b10 &
+b10 ,
+b10 .
+0%
+b1110 /
+#150
+b11 &
+b11 ,
+b11 .
+1%
+b1111 /
+#160
+b10000 /
